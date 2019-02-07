@@ -1,12 +1,18 @@
-var app = angular.module('cuckooApp', []);
-app.controller('indexCtr', function($scope, $http) {
+var app = angular.module('cuckooApp', ["ngRoute"]);
 
-  function getEmployees(){
-    $http.get("/getEmployees").then(function (response) {
-      console.log(response);
-      $scope.employees = response.data;
-    });
-  }
+app.config(function($routeProvider) {
+  $routeProvider
+  .when("/", {
+    templateUrl : "main.html",
+    controller : "indexCtr"
+  })
+  .when("/log", {
+    templateUrl : "log.html",
+    controller : "logCtr"
+  });
+});
+
+app.controller('logCtr', function($scope, $http) {
 
   function addEmployee(){
     var req = {
@@ -24,7 +30,6 @@ app.controller('indexCtr', function($scope, $http) {
     $http(req).then(function(){
       console.log("success");
       eraseFields();
-      getEmployees();
     }, function(){
       console.log("failure");
     });
@@ -36,7 +41,19 @@ app.controller('indexCtr', function($scope, $http) {
   }
 
   eraseFields();
-  getEmployees();
   $scope.addEmployee = addEmployee;
+
+});
+
+app.controller('indexCtr', function($scope, $http) {
+
+  function getEmployees(){
+    $http.get("/getEmployees").then(function (response) {
+      console.log(response);
+      $scope.employees = response.data;
+    });
+  }
+
+  getEmployees();
 
 });

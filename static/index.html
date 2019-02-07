@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
   <script src="index.js"></script>
   <body>
-    <div ng-app="cuckooApp" ng-controller="indexCtr">
 
+    <div ng-app="cuckooApp">
 
-      Name: <input type="text" ng-model="name"><br>
-      Company: <input type="text" ng-model="company"><br>
-
-      <button ng-click="addEmployee()" type="button" name="button">Add Employee</button>
-
-    <br>
-
-    <ul>
-      <li ng-repeat="employee in employees">
-        {{ employee }}
-      </li>
-    </ul>
+      <ng-view></ng-view>
 
     </div>
 
