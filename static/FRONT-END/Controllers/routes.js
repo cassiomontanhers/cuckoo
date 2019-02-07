@@ -2,11 +2,11 @@
 angular.module('routes', ["ngRoute"]).config(function($routeProvider) {
   $routeProvider
   .when("/", {
-    templateUrl : "Pages/main.html",
+    templateUrl : "FRONT-END/Pages/main.html",
     controller : "indexCtr"
   })
   .when("/log", {
-    templateUrl : "Pages/log.html",
+    templateUrl : "FRONT-END/Pages/log.html",
     controller : "logCtr"
   });
 });
