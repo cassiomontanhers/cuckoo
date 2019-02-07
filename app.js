@@ -2,7 +2,7 @@ var express = require('express');
 const app = express()
 const port = 3000
 
-const db = require('./static/connectiondb');
+const db = require('./static/BACK-END/connectiondb');
 
 app.use(express.static('static'))
 
