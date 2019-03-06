@@ -41,6 +41,11 @@ angular.module('routes', ["ngRoute"]).config(function($routeProvider) {
     controller : "dashboardCtr",
     css: 'FRONT-END/Styles/dashboard.css'
   })
+  .when("/schedule", {
+    templateUrl : "FRONT-END/Pages/schedule.html",
+    controller : "scheduleCtr",
+    css: 'FRONT-END/Styles/schedule.css'
+  })
   .when("/OLDMAIN", {
     templateUrl : "FRONT-END/Pages/main.html",
     controller : "indexCtr",
