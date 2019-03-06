@@ -9,5 +9,6 @@ var app = angular.module("cuckooApp",
     'featureController',
     'freeTrialController',
     'loginController',
+    'pricingController',
     'routes'
 ]);
