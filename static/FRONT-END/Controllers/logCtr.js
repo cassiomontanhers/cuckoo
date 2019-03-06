@@ -1,5 +1,6 @@
 
-angular.module('logController', []).controller('logCtr', ['$scope', '$http', function($scope, $http){
+angular.module('logController', []).controller('logCtr', ['$scope', '$rootScope', '$http', '$route', function($scope, $rootScope, $http, $route){
+  $rootScope.css = $route.current.$$route.css;
 
   function addEmployee(){
     var req = {

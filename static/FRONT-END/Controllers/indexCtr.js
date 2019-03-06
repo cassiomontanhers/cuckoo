@@ -1,13 +1,15 @@
 
-angular.module('indexController', []).controller('indexCtr', ['$scope', '$http', function($scope, $http){
+angular.module('indexController', []).controller('indexCtr', ['$scope', '$rootScope', '$http', '$route', function($scope, $rootScope, $http, $route){
+  $rootScope.css = $route.current.$$route.css;
 
   function getEmployees(){
     $http.get("/getEmployees").then(function (response) {
-      console.log(response);
       $scope.employees = response.data;
     });
   }
 
   getEmployees();
+
+
 
 }]);
