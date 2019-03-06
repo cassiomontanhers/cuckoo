@@ -11,7 +11,7 @@
 
 }
 
-ul{
+.container ul{
     list-style-type: none;
     font-weight: bold;
     margin: 0;
@@ -19,7 +19,7 @@ ul{
 
 }
 
-li{
+.container li{
     padding-top: 10px;
 
 }
