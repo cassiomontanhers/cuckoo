@@ -21,6 +21,11 @@ angular.module('routes', ["ngRoute"]).config(function($routeProvider) {
     controller : "freeTrialCtr",
     css: 'FRONT-END/Styles/freeTrial.css'
   })
+  .when("/login", {
+    templateUrl : "FRONT-END/Pages/login.html",
+    controller : "loginCtr",
+    css: 'FRONT-END/Styles/login.css'
+  })
   .when("/OLDMAIN", {
     templateUrl : "FRONT-END/Pages/main.html",
     controller : "indexCtr",

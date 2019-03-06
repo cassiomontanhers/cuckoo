@@ -8,5 +8,6 @@ var app = angular.module("cuckooApp",
     'contactController',
     'featureController',
     'freeTrialController',
+    'loginController',
     'routes'
 ]);
