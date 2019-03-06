@@ -12,5 +12,6 @@ var app = angular.module("cuckooApp",
     'loginController',
     'pricingController',
     'requestsController',
+    'dashboardController',
     'routes'
 ]);
