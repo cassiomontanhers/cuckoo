@@ -7,5 +7,6 @@ var app = angular.module("cuckooApp",
     'footerController',
     'contactController',
     'featureController',
+    'freeTrialController',
     'routes'
 ]);
