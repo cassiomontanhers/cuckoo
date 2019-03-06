@@ -11,6 +11,11 @@ angular.module('routes', ["ngRoute"]).config(function($routeProvider) {
     controller : "contactCtr",
     css: 'FRONT-END/Styles/contact.css'
   })
+  .when("/feature", {
+    templateUrl : "FRONT-END/Pages/feature.html",
+    controller : "featureCtr",
+    css: 'FRONT-END/Styles/feature.css'
+  })
   .when("/OLDMAIN", {
     templateUrl : "FRONT-END/Pages/main.html",
     controller : "indexCtr",
