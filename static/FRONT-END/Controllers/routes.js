@@ -6,6 +6,11 @@ angular.module('routes', ["ngRoute"]).config(function($routeProvider) {
     controller : "homeCtr",
     css: 'FRONT-END/Styles/home.css'
   })
+  .when("/contact", {
+    templateUrl : "FRONT-END/Pages/contact.html",
+    controller : "contactCtr",
+    css: 'FRONT-END/Styles/contact.css'
+  })
   .when("/OLDMAIN", {
     templateUrl : "FRONT-END/Pages/main.html",
     controller : "indexCtr",

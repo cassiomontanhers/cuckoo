@@ -5,5 +5,6 @@ var app = angular.module("cuckooApp",
     'homeController',
     'headerController',
     'footerController',
+    'contactController',
     'routes'
 ]);
