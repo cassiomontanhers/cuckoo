@@ -20,14 +20,17 @@
   <script type="text/javascript" src="FRONT-END/Services/generalService.js"></script>
   <!-- DIRECTIVES -->
   <script type="text/javascript" src="FRONT-END/Directives/header.js"></script>
+  <script type="text/javascript" src="FRONT-END/Directives/headerConsole.js"></script>
   <script type="text/javascript" src="FRONT-END/Directives/footer.js"></script>
   <!-- STYLES -->
   <link rel="stylesheet" ng-href="{{css}}">
   <link rel="stylesheet" href="FRONT-END/Styles/header.css">
   <link rel="stylesheet" href="FRONT-END/Styles/footer.css">
+  <link rel="stylesheet" href="FRONT-END/Styles/headerConsole.css">
 
   <body>
-    <header-directive></header-directive>
+    <header-directive ng-if="logged == true"></header-directive>
+    <header-console-directive ng-if="logged == false"></header-console-directive>
     <ng-view></ng-view>
     <footer-directive></footer-directive>
   </body>
